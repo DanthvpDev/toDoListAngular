@@ -1,0 +1,21 @@
+<header class="bg-gray-500 text-gray-100 py-3 px-10 flex justify-between">
+    <div class="flex">
+        <h1 class="content-center text-2xl uppercase font-[poppins] rounded-4xl bg-gradient-to-bl from-blue-500 to-gray-200/45 px-3">To Do List</h1>
+    </div>
+    <div class="block">
+        <ul class="flex gap-5">
+            <li>
+                <a [routerLink]="['']" routerLinkActive="router-link-active"  class="block py-2 px-4 rounded-4xl font-semibold duration-300  hover:transition-colors hover:bg-gradient-to-bl hover:from-gray-100 hover:to-blue-400/85 hover:text-gray-600">Home</a>
+            </li>
+            <li>
+                <a [routerLink]="['/tasks', 'false']" routerLinkActive="router-link-active"  class="block py-2 px-4 rounded-4xl font-semibold duration-300  hover:transition-colors hover:bg-gradient-to-bl hover:from-gray-100 hover:to-blue-400/85 hover:text-gray-600">Pending</a>
+            </li>
+            <li>
+                <a [routerLink]="['/tasks', 'true']" class="block py-2 px-4 rounded-4xl font-semibold duration-300  hover:transition-colors hover:bg-gradient-to-bl hover:from-gray-100 hover:to-blue-400/85 hover:text-gray-600">Done</a>
+            </li>
+            <li>
+                <a class="block py-2 px-4 rounded-4xl font-semibold duration-300  hover:transition-colors hover:bg-gradient-to-bl hover:from-gray-100 hover:to-blue-400/85 hover:text-gray-600">About</a>
+            </li>
+        </ul>
+    </div>
+</header>
