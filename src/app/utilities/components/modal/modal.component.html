@@ -1,0 +1,36 @@
+<div class="z-30 top-0 h-full w-full bg-slate-700/50 flex justify-center items-center fixed">
+    <span (click)="CloseModal()" class="text-red-700 bg-gray-200 px-3 py-2 rounded-xl absolute top-3 right-3 hover:cursor-pointer hover:scale-105 transition-transform duration-300 hover:text-red-900">
+        <i class="fa-solid fa-x"></i>
+    </span>
+    <article class="border rounded-lg w-96 h-76 flex flex-col" [ngClass]="background">
+        <section class="border-b flex py-3 px-2 justify-between">
+            <div>
+                <h3 class="text-xl font-bold font-[poppins]">Task #{{taskInfo.id}}</h3>
+                <h4>{{taskInfo.title}}</h4>
+            </div>
+            <div>
+                <span class="text-xs font-medium me-2 px-4 py-2 rounded-sm" [ngClass]="badgeColor">{{taskInfo.completed ? 'Done' : 'Pending'}}</span>
+            </div>
+        </section>
+    
+        <section>
+            <ul class="flex flex-col justify-between px-2">
+                <li>
+                    <p class="pb-2 pt-1"><strong>User ID:</strong> {{userInfo.id}}</p>
+                </li>
+                <li>
+                    <p class="py-2"><strong>Username:</strong> {{userInfo.username}}</p>
+                </li>
+                <li>
+                    <p class="py-2"><strong>Email</strong> {{userInfo.email}}</p>
+                </li>
+                <li>
+                    <p class="py-2"><strong>Phone:</strong> {{userInfo.phone}}</p>
+                </li>
+                <li>
+                    <p class="py-2"><strong>Company:</strong> {{userInfo.companyName}}</p>
+                </li>
+            </ul>
+        </section>
+    </article>
+</div>

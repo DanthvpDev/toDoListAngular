@@ -4,6 +4,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { TaskCardsComponent } from './components/task-cards/task-cards.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -11,7 +12,8 @@ import { TaskCardsComponent } from './components/task-cards/task-cards.component
   declarations: [
     NavBarComponent,
     HomeComponent,
-    TaskCardsComponent
+    TaskCardsComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { TaskCardsComponent } from './components/task-cards/task-cards.component
   exports: [
     NavBarComponent,
     HomeComponent,
-    TaskCardsComponent
+    TaskCardsComponent,
+    ModalComponent
   ]
 })
 export class UtilitiesModule { }

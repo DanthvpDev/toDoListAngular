@@ -1,9 +1,22 @@
-<section class="pt-16">
-    <h2 class="text-4xl font-[poppins] uppercase text-center pt-10 pb-3 text-blue-500"> Your {{pageDone ? 'Completed Tasks' : 'Pending Tasks'}}</h2>
-    <p class="text-xl text-center mb-16">{{pageDone ? 'Keep the Momentum Going! ✅' : 'Stay Focused, Stay Ahead 🧠'}}</p>
-</section>
-<section class="pt-16 pb-8 flex flex-wrap justify-evenly gap-y-6">
-    @for(task of tasksFiltered; track $index) {
-        <util-task-cards [id]= "task.id" [title]="task.title" [background]="pageDone ? 'bg-green-500' : 'bg-red-400'"></util-task-cards>
-    }
-</section>
+<main>
+    <util-modal 
+        *ngIf="modalOpen" 
+        (closeModalEvent)="modalOpen = false"
+        [taskInfo]="taskOpened" 
+        [badgeColor]="pageDone ? 'bg-green-700 text-green-200' : 'bg-red-600 text-red-200'" 
+        [background]="pageDone ? 'bg-green-500' : 'bg-red-400'">
+    </util-modal>
+    <section class="pt-16">
+        <h2 class="text-4xl font-[poppins] uppercase text-center pt-10 pb-3 text-blue-500"> Your {{pageDone ? 'Completed Tasks' : 'Pending Tasks'}}</h2>
+        <p class="text-xl text-center mb-16">{{pageDone ? 'Keep the Momentum Going! ✅' : 'Stay Focused, Stay Ahead 🧠'}}</p>
+    </section>
+    <section class="pt-16 pb-8 flex flex-wrap justify-evenly gap-y-6">
+        @for(task of tasksFiltered; track $index) {
+            <util-task-cards 
+                [id]= "task.id" 
+                [title]="task.title" 
+                [background]="pageDone ? 'bg-green-500' : 'bg-red-400'">
+            </util-task-cards>
+        }
+    </section>
+</main>

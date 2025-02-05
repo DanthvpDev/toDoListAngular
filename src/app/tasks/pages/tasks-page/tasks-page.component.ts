@@ -17,6 +17,10 @@ export class TasksPageComponent implements OnInit {
 
   public tasksFiltered!: Task[];
 
+  public taskOpened:Task = {} as Task;
+
+  public modalOpen:boolean = true;
+
   constructor(private route: ActivatedRoute, private tasksService:TaskService){}
 
   ngOnInit(): void {
